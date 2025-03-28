@@ -1,0 +1,89 @@
+a=[15,12,16,19,12,14,16,12]
+b=[3,3,7,8,7,9,8,5,7,11,12]
+c=[67,43,89,45,54,86,45,76,53]
+
+def sort(l):
+    l.sort()
+
+def findLength(l): # l for list
+    return len(l)
+
+def findFrequencies(l):
+    index={}
+    for e in l: # element in list
+        num=l.count(e) # count frequency of that element
+        index[e]=num # Record it in index
+    return index
+
+def findMean(l):
+    total=0
+    for e in l: # e for element
+        total+=e # total the list
+    mean=round((total/len(l)),2) # divide total by number of elements
+    return mean
+
+def findMedian(l): # Calculates the median of a list
+    l.sort()
+    length=len(l)
+    if length%2==1:
+        median=l[int((length-1)/2)] # If odd, median is the middle value
+    elif length%2==0:
+        num1=l[int(length/2)]
+        num2=l[int((length/2)-1)] # If even, median is the two middle values added and divided by 2
+        median=(num1+num2)/2
+    return median
+
+def findMode(l): # Finds the mode(s) of a list
+    count=0
+    modeslist=[] # Lists the modes (there can be multiple)
+    alreadydone=[] # Tracks which values have already been considered (otherwise we will have duplicates in results)
+    for e in l:
+        if e not in alreadydone: # If this number hasn't already been considered
+            tempcount=l.count(e)
+            if tempcount>count: # If it appears more times wipe list of results and add this result
+                modeslist=[]
+                modeslist.append(e)
+                count=tempcount
+            elif tempcount==count: # If it appears an equal amount of times both are results
+                modeslist.append(e)
+            alreadydone.append(e) # Record that this number has been considered
+    if len(modeslist)==2:
+        return modeslist[0],modeslist[1]
+    elif len(modeslist)==1:
+        return modeslist[0]
+def findMode2(l):
+    index=findFrequencies(l)
+    m=0
+    for e in index.values():
+        if e>m:
+            m=e
+    return 
+
+def findMax(l):
+    m=l[0]
+    for e in l: # If this element is bigger than the current maximum
+        if e>m:
+            m=e # Replace this as the new maximum so far
+    return m
+    
+def findMin(l):
+    m=l[0]
+    for e in l: # If this element is bigger than the current maximum
+        if e<m:
+            m=e # Replace this as the new maximum so far
+    return m
+
+def findRange(l):
+    r=findMax(l)-findMin(l)
+    return r
+
+sort(a)
+print('List:',a)
+print('Length:',findLength(a))
+print('Frequencies:',findFrequencies(a))
+print('Mean:',findMean(a))
+print('Median:',findMedian(a))
+print('Mode:',findMode(a))
+print('Max:',findMax(a))
+print('Min:',findMin(a))
+print('Range:',findRange(a))
