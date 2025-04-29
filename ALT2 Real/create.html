@@ -1,0 +1,149 @@
+<!--create.html-->
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>ALT2 - Evaluate</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <div class="navbar">
+  
+	<ul>
+		<span class=navbar-name>Daniel Lewis</span>
+        <a href="index.html">Home</a>
+        <a href="meetbrief.html">Meeting the Brief</a>
+        <a href="investigation.html">Investigation</a>
+		<a href="planning.html">Planning & Design</a>
+		<a href="create.html">Create</a>
+		<a href="evaluate.html">Evaluation</a>
+		<a href="references.html">References & Wordcount</a>
+	</ul>
+	
+    </div>
+    <div class="content">
+        <h1>Create</h1>
+		<br>
+		<h3>Progress Log:</h3>
+		<h4>Day 1: 01/04/25</h4>
+		<ul>
+			<li>Brainstormed multiple ideas for our hypothesis
+			</li>
+			<li>Decided to focus in on Ireland's performace during the COVID-19 pandemic
+			</li>
+			<li>Researched many databases for suitable datasets
+			</li>
+			<li>Assigned team roles
+			</li>
+		</ul>
+		<h4>Day 2: 02/04/25</h4>
+		<ul>
+			<li>Decided on a final hypothesis: <i>Ireland had a better case-to-death ratio than most countries</i>
+			</li>
+			<li>Found a dataset to use on kaggle
+			</li>
+		</ul>
+		<h4>Day 3: 04/04/25</h4>
+		<ul>
+			<li>Created flowchart and pseudocode for the project
+			</li>
+			<li>Decided on our preferred method for visualising data
+			</li>
+		</ul>
+		<h4>Day 4: 07/04/25</h4>
+		<ul>
+			<li>Downloaded and cleaned dataset, making it ready for use
+			</li>
+			<li>Began work on scatterplot, running into an error
+			</li>
+		</ul>
+		<h4>Day 5: 08/04/25</h4>
+		<ul>
+			<li>Conducted research on the workings of scatterplots
+			</li>
+			<li>Spent most of our time troubleshooting, debugging and researching
+			</li>
+			<li>Solved the problem at the very end of the class
+			</li>
+		</ul>
+		<h4>Day 6: 09/04/25</h4>
+		<ul>
+			<li>We began work on the website prototypes
+			</li>
+			<li>Worked also on streamlining graph - annotating points and sizing bubbles by country population
+			</li>
+		</ul>
+		<h4>Day 7: 11/04/25</h4>
+		<ul>
+			<li>Styled and continued work on website
+			</li>
+			<li>Commented and cleaned up code
+			</li>
+		</ul>
+		<hr>
+				<br>
+		<p>Include testing data - both functional (code does as expected) and system testing(overall testing of the system)</p>
+		<h4>Sample Test Table - Inputting data in form on webpage</h4>
+		<table>
+			<tr>
+				<th>Test ID</th>
+				<th>Description</th>
+				<th><p>Test</p>
+					<p>Data</p>
+				</th>
+				<th><p>Expected</p>
+					<p>Result</p>
+				</th>
+				<th><p>Actual</p>
+					<p>Result</p>
+				</th>
+				<th><p>Passed:</p>
+					<p>Y/N</p>
+				</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>To test inputting a valid name in the Name field</td>
+				<td>John Doe</td>
+				<td>No error message given</td>
+				<td>No error message given</td>
+				<td>Y</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>To test inputting a special characters in the Name field</td>
+				<td>$ohn $oe</td>
+				<td>Error message given - "Please enter a valid name with no special characters"</td>
+				<td>No error message given</td>
+				<td>N</td>
+			</tr>
+		</table>
+		<br>
+		<hr>
+		<p><b>Problems Encountered</b></p>
+		<p>We encountered a determined error that took us a long time to fix</p>
+		<p>The graph would plot the y-axis values all out of order</p>
+		<p>After extensive troubleshooting, we realised that the dataset had those numbers in a format with commas (e.g. 12,374 instead of 12374)</p>
+		<p>This meant that when read into python, they became strings instead of integers</p>
+		<p>We replaced all the commas with nothing and used loops to turn every data piece into floats</p>
+		<p>And that solved the problem!</p> 
+		<hr>
+		<p><b>Algorithm Design</b></p>
+		<ul>
+			<br>
+			<li>Clearly explain the algorithm that you designed for the analytics part of your project.
+			</li>
+			<li>This should be supported by providing:
+			<ul>
+				<li>Pseudocode of the algorithm
+				</li>
+				<li>Explanation of the code
+				</li>
+			</ul>
+			<li>Please note that the pseudocode and code do not count towards your word count.
+			</li>
+		</ul>
+		</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
