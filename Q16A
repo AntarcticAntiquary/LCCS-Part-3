@@ -1,0 +1,47 @@
+# Question 16(a)
+# Student name:
+
+#function definition used in part (v)
+def is_anagram(w1,w2):
+    if sorted (w1) == sorted(w2):
+        return True
+    else:
+        return False
+    
+word1 = input("Enter the first word: ")
+# word2 = "SILENT"
+# Part (i) - get second word from user
+word2=input('Enter the second word: ')
+
+#Turn everything in the words to uppercase so case is irrelevant - Part (iv)
+Word1=word1.upper()
+Word2=word2.upper()
+
+#test whether the sorted string are the same as each other
+#if the sorted strings are the same then they must be anagrams
+if (sorted(Word1)==sorted(Word2)):
+    # Tell the user that the two words are anagrams - Part (ii)
+    print(word1,"is an anagram of",word2)
+else:
+ # Tell user if it is not an anagram - Part (iii)
+    print(word1,"is NOT an anagram of",word2)
+    
+#check again, using function is_anagram - Part (v)
+if is_anagram(Word1,Word2):
+    print(word1,"is an anagram of",word2)
+else:
+    print(word1,"is NOT an anagram of",word2)
+    
+#Part (vi): Get a phrase from the user
+phrase=input('Enter a phrase: ')
+Phrase=phrase.replace(' ','')
+Phrase=phrase.upper()
+if is_anagram(Phrase,Word1):
+    print(phrase,"is an anagram of",word1)
+else:
+    print(phrase,"is NOT an anagram of",word1)
+if is_anagram(Phrase,Word2):
+    print(phrase,"is an anagram of",word2)
+else:
+    print(phrase,"is NOT an anagram of",word2)
+    
